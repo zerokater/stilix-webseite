@@ -36,3 +36,6 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+Su questo link stanno tutte le cose per usare GITHUB con VSCODE
+https://github.com/sailesh307/GitHubTutorial?tab=readme-ov-file#4-adding-new-changes-or-new-file
