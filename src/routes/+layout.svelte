@@ -17,13 +17,18 @@
     box-sizing: border-box;
     text-decoration: none;
     color: black;
+    
    }
 
    :global(:root){
     --primary: #ef233c;
+    --secondary: #282828;
+    --akzent:#78D68C;
    }
 
    :global(body){
-    background-color: #353535;
+        background-color: white;
+        scroll-behavior: smooth;
    }
+
 </style>
