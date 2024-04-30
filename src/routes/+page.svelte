@@ -4,7 +4,7 @@
 
 <main>
     <article>
-        <h1>Von der <span>Kreation neuer Marken</span> bis hin zum kleinsten Detail im <span>Design</span></h1>
+        <h1>Von der <span>Kreation neuer Marken</span> bis hin zum kleinsten <span>Detail im Design</span></h1>
         <h2>Stilix ist eine Kreativagentur, die Unternehmen hilft, sich von der Masse abzuheben</h2>
     </article>
 </main>
@@ -32,12 +32,13 @@
     }
 
     span{
-
         text-decoration: underline var(--primary);
+        
     }
 
     h1{
         text-align: center;
+
         font-size: 48px;
     }
     

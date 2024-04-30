@@ -23,7 +23,8 @@
    :global(:root){
     --primary: #ef233c;
     --secondary: #282828;
-    --akzent:#78D68C;
+    --blue: #3a86ff;
+    --green:#00ce2d;
    }
 
    :global(body){

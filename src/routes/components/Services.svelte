@@ -36,6 +36,11 @@
         padding: 2rem 0rem;
         width: 100%;
         display: flex;
+        background: rgb(239,35,60);
+        background: linear-gradient(0deg, rgba(239,35,60,1) 0%, rgba(255,255,255,1) 100%);  
+
+
+        
     }
 
     article{
@@ -62,7 +67,7 @@
     }
 
     .service{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         height: 450px;
         width: 300px;
         border-radius: 0.5rem;
@@ -71,12 +76,12 @@
         gap: 1rem;
         align-items: center;
         overflow: hidden;
-        transition: all 0.2s;
         cursor: pointer;
+        background-color: white;
     }
     
     .service:hover{
-        scale: 1.03;
+        scale: 1.01;
     }
 
     .service img{
@@ -97,10 +102,9 @@
 
     .beschreibung p{
         text-align: center;
-        color: var(--secondary);
     }
+    
 
-    h3{
-        color: var(--primary);
-    }
+
+
 </style>
