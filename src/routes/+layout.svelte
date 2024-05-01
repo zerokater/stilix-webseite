@@ -1,6 +1,9 @@
 <script>
     import Navbar from "./components/Navbar.svelte";
+    
 </script>
+
+
 
 <Navbar/>
 
@@ -22,9 +25,10 @@
 
    :global(:root){
     --primary: #ef233c;
-    --secondary: #282828;
-    --blue: #3a86ff;
+    --secondary: #101115;
+    --gray: #8E9095;
     --green:#00ce2d;
+    --blue: #2187E7;
    }
 
    :global(body){

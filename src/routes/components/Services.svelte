@@ -1,27 +1,24 @@
 <section>
     <article>
-        <h1>Unsere Services</h1>
+        <h1>Was wir machen</h1>
         <div class="services" id="services">
 
             <div class="service">
-                <img src="images/grafik-design.jpg" alt="">
-                <div class="beschreibung">
+                <div class="beschreibung grafikdesign">
                     <h3>Grafikdesign</h3>
                     <p>Wir bringen deine Marke zum Leben - von Konzept bis Umsetzung. Ideen werden durch Farben, Formen, Typografie und Bilder zu ansprechenden Designs.</p>
                 </div>
             </div>
                 
             <div class="service">
-                <img src="images/web-design.jpg" alt="">
-                <div class="beschreibung">
+                <div class="beschreibung webdesign">
                     <h3>Webdesign</h3>
                     <p>Wir verwandeln deine Vision in eine Online-Präsenz, die nicht nur ästhetisch ansprechend ist, sondern mit deinem Look & Feel und einer intuitiven Nutzerführung punktet.</p>
                 </div>
             </div>
 
             <div class="service">
-                <img src="images/brand-design.jpg" alt="">
-                <div class="beschreibung">
+                <div class="beschreibung branddesign">
                     <h3>Brand Design</h3>
                     <p>Wir verleihen deiner Marke mit einem Brand Design ein einheitliches Erscheinungsbild und eine ganzheitliche visuelle Präsenz. Grafikdesign und Webdesign im Komplettpaket.</p>
                 </div>
@@ -36,8 +33,7 @@
         padding: 2rem 0rem;
         width: 100%;
         display: flex;
-        background: rgb(239,35,60);
-        background: linear-gradient(0deg, rgba(239,35,60,1) 0%, rgba(255,255,255,1) 100%);  
+
 
 
         
@@ -67,41 +63,49 @@
     }
 
     .service{
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        height: 450px;
-        width: 300px;
-        border-radius: 0.5rem;
+        height: 300px;
+        width: 330px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        justify-content: center;
         align-items: center;
-        overflow: hidden;
         cursor: pointer;
-        background-color: white;
+        background-color: var(--secondary);
     }
     
-    .service:hover{
-        scale: 1.01;
-    }
-
-    .service img{
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-    }
 
     .beschreibung{
-        color: white;
-        padding: 0rem 1rem;
+        padding: 35px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
+    }
+
+    .beschreibung h3{
+        font-weight: 400;
+    }
+
+
+    .grafikdesign h3{
+        color: var(--green);
+        text-shadow: 0px 0px 30px var(--green);
+    }
+
+    .webdesign h3{
+        color: var(--blue);
+        text-shadow: 0px 0px 30px var(--blue);
+    }
+
+    .branddesign h3{
+        color: var(--primary);
+        text-shadow: 0px 0px 30px var(--primary);
     }
 
     .beschreibung p{
-        text-align: center;
+        color: var(--gray);
     }
     
 
