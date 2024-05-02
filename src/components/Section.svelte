@@ -15,7 +15,7 @@
         <p>{inhalt}</p>
         <Button link="{buttonLink}" text={buttonText} type={buttonType}/>
     </article>
-</section>
+</section>  
 
 
 <style>

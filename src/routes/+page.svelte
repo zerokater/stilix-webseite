@@ -1,7 +1,7 @@
 <script>
-    import Services from "./components/Services.svelte";
-    import Button from "./components/Button.svelte";
-    import Section from "./components/Section.svelte";
+    import Services from "/src/components/Services.svelte";
+    import Button from "/src/components/Button.svelte";
+    import Section from "/src/components/Section.svelte";
 </script>
 
 

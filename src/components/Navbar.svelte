@@ -4,7 +4,7 @@
         <nav-links>
             <a href="/">Über uns</a>
             <a href="/">Referenzen</a>
-            <a href="/">Kontakt</a>
+            <a href="/kontakt">Kontakt</a>
         </nav-links>
     </nav>
 </header>
