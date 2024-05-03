@@ -1,11 +1,11 @@
 <script>
-    import Navbar from "/src/components/Navbar.svelte";
+    import Nav from "/src/components/Nav.svelte";
     
 </script>
 
 
 
-<Navbar/>
+<Nav/>
 
 <slot />
 
