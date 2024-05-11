@@ -1,7 +1,7 @@
 <script>
     import Nav from "/src/components/Nav.svelte";
-    
 </script>
+
 
 
 
@@ -31,8 +31,7 @@
     --blue: #2187E7;
    }
 
-   :global(body){
-        background-color: white;
+   :global(html){
         scroll-behavior: smooth;
    }
 

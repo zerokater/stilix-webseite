@@ -1,50 +1,142 @@
+<script>
+    import { onMount } from 'svelte';
+  
+    import { slide } from 'svelte/transition';
+
+    let isSmallScreen = false;
+    let isMenuOpen = false;
+  
+    
+    const checkScreenSize = () => {
+      isSmallScreen = window.innerWidth <= 768; // Anpassen der Breakpoint-Größe bei Bedarf
+    };
+  
+    onMount(() => {
+      checkScreenSize();
+      window.addEventListener('resize', checkScreenSize);
+      return () => window.removeEventListener('resize', checkScreenSize);
+    });
+  
+    const toggleMenu = () => {
+      isMenuOpen = !isMenuOpen;
+    };
+</script>
+
 <header>
+
     <nav>
-        <img src="images/stilix-logo.svg" alt="">
-        <nav-links>
-            <a href="/">Über uns</a>
-            <a href="/">Referenzen</a>
-            <a href="/kontakt">Kontakt</a>
-        </nav-links>
+        {#if isMenuOpen & isSmallScreen}
+            <img id="logo" src="images/stilix-logo-negativ.svg" alt=""> 
+        {:else}
+             <img id="logo" src="images/stilix-logo.svg" alt="">
+        {/if}
+    
+        {#if isSmallScreen}
+            <!-- Small screen menu (e.g., hamburger menu) -->
+            {#if !isMenuOpen}
+                <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
+            {:else}
+                <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger-close.svg" alt=""></a>
+            {/if}
+    
+            {#if isMenuOpen}
+                <div class="nav-links-hamburger" transition:slide>
+                    <a href="/" on:click={toggleMenu}>Home</a>
+                    <a href="/" on:click={toggleMenu}>Über Uns</a>
+                    <a href="/" on:click={toggleMenu}>Services</a>
+                    <a href="/" on:click={toggleMenu}>Kontakt</a>
+                </div>
+            {/if}
+        {:else}
+            <!-- Large screen menu -->
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/">Über Uns</a>
+                <a href="/">Services</a>
+                <a href="/">Kontakt</a>
+            </div>
+        {/if}
     </nav>
 </header>
+  
+  <style>
 
-<style>
+
     header{
-        width: 1120px;
-        padding: 3rem 0rem;
-        margin: 0 auto;
-
+        width: 100%;
     }
 
-    nav{
+    #logo{
+        z-index: 2;
+        width: 84px;
+    }
+
+
+    #hamburger{
+        z-index: 2; 
+        display: flex;
+        align-items: center;
+        justify-content: center-;
+    }
+
+    #hamburger img{
+        width: 32px;
+        cursor: pointer;
+    }
+    /* Add your CSS styling here */
+    nav {
+        padding: 2rem 0rem;
+        width: 1120px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center ;
+      /* Add styles for the menu container */
     }
-
-    nav-links{
+  
+    .nav-links{
         display: flex;
-        gap: 2rem;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links-hamburger{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        background-color: var(--primary);
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links-hamburger a{
+        color:white;
+        font-size: 32px;
         font-weight: 500;
     }
 
-    nav-links a{
-        color: var(--gray);
-        transition: all 0.3s;
+
+
+    @media screen and (max-width: 1150px) {
+    nav {
+        padding: 2rem;
+        width: 100%;
+    }
     }
 
-    nav-links a:hover{
-        color: var(--secondary);
+    /* On screens that are 992px or less, set the background color to blue */
+    @media screen and (max-width: 768px) {
+    nav {
+        padding: 2rem;
+        width: 100%;
     }
-
-
-
-    img{
-        width: 85px;
     }
-    
-
-</style>
+  </style>
+  
