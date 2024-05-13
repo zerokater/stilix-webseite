@@ -29,7 +29,7 @@
         {#if isMenuOpen & isSmallScreen}
             <img id="logo" src="images/stilix-logo-negativ.svg" alt=""> 
         {:else}
-             <img id="logo" src="images/stilix-logo-sw.svg" alt="">
+             <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
         {/if}
     
         {#if isSmallScreen}
@@ -64,6 +64,7 @@
 
 
     header{
+        background-color: var(--dark);
         width: 100%;
       
     }
@@ -118,7 +119,6 @@
         height: 100vh;
         overflow: hidden;
         position: fixed;
-        background-color: var(--dark);
         top: 0;
         left: 0;
         display: flex;
@@ -126,12 +126,14 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 1.5rem;
+        background: var(--dark);
     }
 
     .nav-links-hamburger a{
-        color:white;
+        z-index: 5;
         font-size: 48px;
         font-weight: 700;
+        color: white;
         transition: all 0.2s ease-out;
     }
 
