@@ -28,10 +28,10 @@
 <header>
     <nav>
         <!-- Logo -->
-        <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
+        <img id="logo" src="images/stilix-logo-negativ.svg" alt="" >
         {#if isSmallScreen}
             <!-- Hamburger-Menüsymbol -->
-            <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
+            <a id="hamburger" href="{void(0)}" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
             {#if isMenuOpen}
                 <!-- Menü links (aufgeklappt) -->
                 <div class="nav-links-hamburger" transition:slide>
@@ -39,14 +39,14 @@
                         <!-- Logo im aufgeklappten Menü -->
                         <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
                         <!-- Schließen-Symbol für das aufgeklappte Menü -->
-                        <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger-close.svg" alt=""></a>
+                        <a id="hamburger" href="{void(0)}" on:click={toggleMenu}><img src="images/hamburger-close.svg" alt=""></a>
                     </div>
                     <!-- Menülinks im aufgeklappten Zustand -->
                     <div class="menu-open-links">
                         <a href="/" on:click={toggleMenu}>Home</a>
-                        <a href="/" on:click={toggleMenu}>Über Uns</a>
-                        <a href="/" on:click={toggleMenu}>Services</a>
-                        <a href="/" on:click={toggleMenu}>Kontakt</a>
+                        <a href="/uber_uns" on:click={toggleMenu}>Über Uns</a>
+                        <a href="/services" on:click={toggleMenu}>Services</a>
+                        <a href="/kontakt" on:click={toggleMenu}>Kontakt</a>
                     </div>
                 </div>
             {/if}
@@ -54,9 +54,9 @@
             <!-- Normale Menülinks (nicht aufgeklappt) -->
             <div class="nav-links">
                 <a href="/">Home</a>
-                <a href="/">Über Uns</a>
-                <a href="/">Services</a>
-                <a href="/">Kontakt</a>
+                <a href="/uber_uns">Über Uns</a>
+                <a href="/services">Services</a>
+                <a href="/kontakt">Kontakt</a>
             </div>
         {/if}
     </nav>
@@ -85,6 +85,7 @@
         padding: 2rem 0rem;
         width: 1400px; /* Hier habe ich die feste Breite entfernt, da es für responsives Design besser ist, keine feste Breite zu verwenden. */
         margin: 0 auto;
+        height: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -98,6 +99,11 @@
         gap: 2rem;
     }
 
+
+    .nav-links a{
+        color: var(--gray);
+        transition: 200ms all ease-out;
+    }
     /* Stilregeln für die normalen Menülinks bei Hover */
     .nav-links a:hover {
         color: white;
@@ -107,7 +113,7 @@
     .nav-links-hamburger {
         padding: 0rem 2rem;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -125,7 +131,7 @@
         font-size: 48px;
         font-weight: 700;
         color: white;
-        transition: all 0.2s ease-out;
+        transition: all 200ms ease-out;
     }
 
     /* Stilregeln für die Menülinks im aufgeklappten Zustand bei Hover */
@@ -138,6 +144,7 @@
 
     /* Stilregeln für das Navigationselement im aufgeklappten Zustand */
     .menu-open-nav {
+        height: 10vh;
         padding: 2rem 0rem;
         width: 100%;
         display: flex;
@@ -147,6 +154,7 @@
 
     /* Stilregeln für die Menülinks im aufgeklappten Zustand */
     .menu-open-links {
+        height: 90vh;
         height: 100%;
         display: flex;
         flex-direction: column;

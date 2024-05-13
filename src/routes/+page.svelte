@@ -1,62 +1,100 @@
 <script>
-    import Button from "./Button.svelte";
+    import Button from "../components/Button.svelte";
     import Section from "../components/Section.svelte";
+    import { blur  } from "svelte/transition";
 </script>
 
-<main>
+<main transition:blur>
     <article>
         <h1>Kreatives design <br> für <span>starke Marken</span></h1>
-        <p>Wir sind eine Kreativagentur, die Unternehmen hilft, sich als <br>Branchenführer zu profilieren.</p>
-        <Button href="/" text="Los geht's"/>
+        <p>Stilix ist eine Kreativagentur, die Unternehmen hilft, sich als Branchenführer zu profilieren.</p>
+        <Button href="/kontakt" text="Los geht's"/>
     </article>
 </main>
 
+<!--.
 <Section>
     <h1>alo</h1>
     <a href="/">che fai</a>
 </Section>
+-->
+
 <style>
     main{
         width: 100%;
-        height: 60vh;
         background-color: var(--dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     article{
-        display: flex;
-        padding-top: 10rem;
+        padding: 2rem 0rem;
         width: 1400px;
-        margin: auto;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        height: 500px;
+        gap: 1.5rem;
     }
 
+    
     h1{
+        font-size: var(--h1);
         text-align: center;
-        font-size: 48px;
+        line-height: 130%;
         color: white;
     }
 
-    p{
-        text-align: center;
-        color: var(--gray);
-        font-size: 16px;
-    }
-
-    h1 span{
-        background: var(--gradient-green);;
+    span{
+        background: var(--gradient);;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
+    p{
+        width: 500px;
+        color: var(--gray);
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @media screen and (max-width: 1460px) {
-    article {
-        padding: 2rem;
-        width: 100%;
+        article {
+            padding: 2rem;
+            width: 100%;
+        }
     }
+
+    @media screen and (max-width: 768px) {
+
+        article{
+            align-items: start;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: start;
+        }
+
+        p{
+            width: auto;
+            text-align: start;
+        }
     }
 </style>
