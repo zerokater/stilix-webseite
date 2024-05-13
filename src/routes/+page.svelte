@@ -97,4 +97,22 @@
             text-align: start;
         }
     }
+
+    @media screen and (max-width: 470px) {
+
+    article{
+        align-items: start;
+        gap: 1rem;
+    }
+    h1 {
+        font-size: 32px;
+        text-align: start;
+    }
+
+    p{
+        font-size: 14px;
+        width: auto;
+        text-align: start;
+    }
+    }
 </style>
