@@ -105,7 +105,7 @@
         gap: 1rem;
     }
     h1 {
-        font-size: 32px;
+        font-size: 36px;
         text-align: start;
     }
 
