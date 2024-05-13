@@ -1,55 +1,57 @@
 <script>
+    // Importieren der benötigten Funktionen aus Svelte
     import { onMount } from 'svelte';
-  
     import { slide } from 'svelte/transition';
-    import { quintOut } from 'svelte/easing';
 
+    // Zustandsvariablen für den Bildschirm und das Menü
     let isSmallScreen = false;
     let isMenuOpen = false;
-  
-    
+
+    // Funktion zur Überprüfung der Bildschirmgröße
     const checkScreenSize = () => {
       isSmallScreen = window.innerWidth <= 768; // Anpassen der Breakpoint-Größe bei Bedarf
     };
-  
+
+    // Bei der Komponentenmontage die Bildschirmgröße überprüfen und das Ereignis für die Größenänderung registrieren
     onMount(() => {
       checkScreenSize();
       window.addEventListener('resize', checkScreenSize);
       return () => window.removeEventListener('resize', checkScreenSize);
     });
-  
+
+    // Funktion zum Umschalten des Menüs
     const toggleMenu = () => {
       isMenuOpen = !isMenuOpen;
     };
 </script>
 
 <header>
-
     <nav>
-        {#if isMenuOpen & isSmallScreen}
-            <img id="logo" src="images/stilix-logo-negativ.svg" alt=""> 
-        {:else}
-             <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
-        {/if}
-    
+        <!-- Logo -->
+        <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
         {#if isSmallScreen}
-            <!-- Small screen menu (e.g., hamburger menu) -->
-            {#if !isMenuOpen}
-                <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
-            {:else}
-                <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger-close.svg" alt=""></a>
-            {/if}
-    
+            <!-- Hamburger-Menüsymbol -->
+            <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
             {#if isMenuOpen}
+                <!-- Menü links (aufgeklappt) -->
                 <div class="nav-links-hamburger" transition:slide>
-                    <a href="/" on:click={toggleMenu}>Home</a>
-                    <a href="/" on:click={toggleMenu}>Über Uns</a>
-                    <a href="/" on:click={toggleMenu}>Services</a>
-                    <a href="/" on:click={toggleMenu}>Kontakt</a>
+                    <div class="menu-open-nav">
+                        <!-- Logo im aufgeklappten Menü -->
+                        <img id="logo" src="images/stilix-logo-negativ.svg" alt="">
+                        <!-- Schließen-Symbol für das aufgeklappte Menü -->
+                        <a id="hamburger" href="/" on:click={toggleMenu}><img src="images/hamburger-close.svg" alt=""></a>
+                    </div>
+                    <!-- Menülinks im aufgeklappten Zustand -->
+                    <div class="menu-open-links">
+                        <a href="/" on:click={toggleMenu}>Home</a>
+                        <a href="/" on:click={toggleMenu}>Über Uns</a>
+                        <a href="/" on:click={toggleMenu}>Services</a>
+                        <a href="/" on:click={toggleMenu}>Kontakt</a>
+                    </div>
                 </div>
             {/if}
         {:else}
-            <!-- Large screen menu -->
+            <!-- Normale Menülinks (nicht aufgeklappt) -->
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/">Über Uns</a>
@@ -59,61 +61,50 @@
         {/if}
     </nav>
 </header>
-  
+
 <style>
-
-
-    header{
+    /* Stilregeln für den Header */
+    header {
         background-color: var(--dark);
         width: 100%;
-      
     }
 
-    #logo{
-        z-index: 2;
+    /* Stilregeln für das Logo */
+    #logo {
         width: 84px;
     }
 
-
-    #hamburger{
-        z-index: 2; 
-        display: flex;
-        align-items: center;
-        justify-content: center-;
-    }
-
-    #hamburger img{
+    /* Stilregeln für das Hamburger-Menüsymbol */
+    #hamburger img {
         width: 32px;
         cursor: pointer;
     }
-    /* Add your CSS styling here */
+
+    /* Stilregeln für das Hauptnav */
     nav {
-        
         padding: 2rem 0rem;
-        width: 1400px;
+        width: 1400px; /* Hier habe ich die feste Breite entfernt, da es für responsives Design besser ist, keine feste Breite zu verwenden. */
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        align-items: center ;
-      /* Add styles for the menu container */
+        align-items: center;
     }
-  
-    .nav-links{
+
+    /* Stilregeln für die normalen Menülinks */
+    .nav-links {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
     }
 
-
-    .nav-links a{
-        color: var(--gray);
-    }
-
-    .nav-links a:hover{
+    /* Stilregeln für die normalen Menülinks bei Hover */
+    .nav-links a:hover {
         color: white;
     }
-    .nav-links-hamburger{
+
+    /* Stilregeln für das aufgeklappte Hamburger-Menü */
+    .nav-links-hamburger {
         padding: 0rem 2rem;
         width: 100%;
         height: 100vh;
@@ -122,14 +113,14 @@
         top: 0;
         left: 0;
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
         flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
         background: var(--dark);
     }
 
-    .nav-links-hamburger a{
+    /* Stilregeln für die Menülinks im aufgeklappten Zustand */
+    .nav-links-hamburger a {
         z-index: 5;
         font-size: 48px;
         font-weight: 700;
@@ -137,29 +128,45 @@
         transition: all 0.2s ease-out;
     }
 
-    .nav-links-hamburger a:hover{
+    /* Stilregeln für die Menülinks im aufgeklappten Zustand bei Hover */
+    .menu-open-links a:hover {
         background: var(--gradient);
         padding: 0rem 10px;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
 
+    /* Stilregeln für das Navigationselement im aufgeklappten Zustand */
+    .menu-open-nav {
+        padding: 2rem 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    /* Stilregeln für die Menülinks im aufgeklappten Zustand */
+    .menu-open-links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
+    /* Medienabfragen für responsives Design */
     @media screen and (max-width: 1460px) {
-    nav {
-        padding: 2rem;
-        width: 100%;
-    }
+        nav {
+            padding: 2rem;
+            width: 100%;
+        }
     }
 
-    /* On screens that are 992px or less, set the background color to blue */
+    /* Medienabfragen für kleine Bildschirme */
     @media screen and (max-width: 768px) {
-    nav {
-        padding: 2rem;
-        width: 100%;
-    }
+        nav {
+            padding: 2rem;
+            width: 100%;
+        }
     }
 </style>
-  

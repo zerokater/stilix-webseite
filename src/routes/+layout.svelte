@@ -30,6 +30,7 @@
     --green:#00ce2d;
     --blue: #2187E7;
     --gradient: linear-gradient(120deg, #9d00ff, #0099f8);
+    --gradient-green: linear-gradient(120deg, #08FFF0, #60FF4E);
    }
 
    :global(html){
