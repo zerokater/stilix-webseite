@@ -41,7 +41,7 @@
             {/if}
     
             {#if isMenuOpen}
-                <div class="nav-links-hamburger" transition:slide={{ delay: 50, duration: 200, easing: quintOut}}>
+                <div class="nav-links-hamburger" transition:slide>
                     <a href="/" on:click={toggleMenu}>Home</a>
                     <a href="/" on:click={toggleMenu}>Über Uns</a>
                     <a href="/" on:click={toggleMenu}>Services</a>
