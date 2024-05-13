@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
   
     import { slide } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
 
     let isSmallScreen = false;
     let isMenuOpen = false;
@@ -28,7 +29,7 @@
         {#if isMenuOpen & isSmallScreen}
             <img id="logo" src="images/stilix-logo-negativ.svg" alt=""> 
         {:else}
-             <img id="logo" src="images/stilix-logo.svg" alt="">
+             <img id="logo" src="images/stilix-logo-sw.svg" alt="">
         {/if}
     
         {#if isSmallScreen}
@@ -40,7 +41,7 @@
             {/if}
     
             {#if isMenuOpen}
-                <div class="nav-links-hamburger" transition:slide>
+                <div class="nav-links-hamburger" transition:slide={{ delay: 50, duration: 200, easing: quintOut}}>
                     <a href="/" on:click={toggleMenu}>Home</a>
                     <a href="/" on:click={toggleMenu}>Über Uns</a>
                     <a href="/" on:click={toggleMenu}>Services</a>
@@ -59,11 +60,12 @@
     </nav>
 </header>
   
-  <style>
+<style>
 
 
     header{
         width: 100%;
+      
     }
 
     #logo{
@@ -85,8 +87,9 @@
     }
     /* Add your CSS styling here */
     nav {
+        
         padding: 2rem 0rem;
-        width: 1120px;
+        width: 1400px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -101,30 +104,48 @@
         gap: 2rem;
     }
 
+
+    .nav-links a{
+        color: var(--gray);
+    }
+
+    .nav-links a:hover{
+        color: white;
+    }
     .nav-links-hamburger{
+        padding: 0rem 2rem;
         width: 100%;
         height: 100vh;
         overflow: hidden;
         position: fixed;
-        background-color: var(--primary);
+        background-color: var(--dark);
         top: 0;
         left: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         gap: 1.5rem;
     }
 
     .nav-links-hamburger a{
         color:white;
-        font-size: 32px;
-        font-weight: 500;
+        font-size: 48px;
+        font-weight: 700;
+        transition: all 0.2s ease-out;
     }
 
+    .nav-links-hamburger a:hover{
+        background: var(--gradient);
+        padding: 0rem 10px;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
 
 
-    @media screen and (max-width: 1150px) {
+
+    @media screen and (max-width: 1460px) {
     nav {
         padding: 2rem;
         width: 100%;
@@ -138,5 +159,5 @@
         width: 100%;
     }
     }
-  </style>
+</style>
   

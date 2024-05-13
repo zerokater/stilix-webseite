@@ -25,10 +25,11 @@
 
    :global(:root){
     --primary: #ef233c;
-    --secondary: #101115;
+    --dark: #050505;
     --gray: #8E9095;
     --green:#00ce2d;
     --blue: #2187E7;
+    --gradient: linear-gradient(120deg, #9d00ff, #0099f8);
    }
 
    :global(html){
