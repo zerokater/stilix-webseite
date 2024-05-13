@@ -110,7 +110,7 @@
     }
 
     p{
-        font-size: 14px;
+        font-size: 16px;
         width: auto;
         text-align: start;
     }
