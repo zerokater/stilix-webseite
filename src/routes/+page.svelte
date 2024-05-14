@@ -19,6 +19,8 @@
 </Section>
 -->
 
+
+
 <style>
     main{
         width: 100%;
@@ -30,7 +32,7 @@
 
     article{
         padding: 2rem 0rem;
-        width: 1400px;
+        width: 1401px;
         display: flex;
         flex-direction: column;
         justify-content: center;
