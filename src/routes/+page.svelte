@@ -1,10 +1,8 @@
 <script>
     import Button from "../components/Button.svelte";
-    import Section from "../components/Section.svelte";
-    import { blur  } from "svelte/transition";
 </script>
 
-<main transition:blur>
+<main>
     <article>
         <h1>Kreatives design <br> für <span>starke Marken</span></h1>
         <p>Stilix ist eine Kreativagentur, die Unternehmen hilft, sich als Branchenführer zu profilieren.</p>
