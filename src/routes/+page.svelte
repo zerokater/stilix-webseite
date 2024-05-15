@@ -1,7 +1,6 @@
 <script>
     // Importing the Button component from its file
     import Button from "../components/Button.svelte";
-    import Services from "../components/Services.svelte";
     import Section from "../components/Section.svelte";
 </script>
 
@@ -25,8 +24,8 @@
 </main>
 
 
+<Section/>
 
-<Services/>
 
 
 
@@ -40,7 +39,7 @@
     }
 
     article {
-        padding: 5rem 0rem;
+        padding: 10rem 0rem 10rem 0rem;
         width: 1400px;
         display: flex;
         flex-direction: column;
@@ -88,12 +87,17 @@
 
     @media screen and (max-width: 1460px) {
         article {
-            padding: 10rem 2rem;
+            padding: 7rem 2rem 7rem 2rem;
             width: 100%;
         }
     }
 
     @media screen and (max-width: 768px) {
+        article {
+            padding: 5rem 2rem 4rem 2rem;
+            width: 100%;
+        }
+        
         p {
             width: 400px;
         }

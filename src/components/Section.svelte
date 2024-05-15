@@ -20,6 +20,7 @@
         width: 1400px;
         margin: 0 auto;
         gap: 2rem;
+        height: 600px;
     }
 
 
