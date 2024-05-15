@@ -102,7 +102,7 @@
 
     @media screen and (max-width: 1460px) {
         article {
-            padding: 5rem 2rem;
+            padding: 10rem 2rem;
             width: 100%;
         }
     }
@@ -122,7 +122,18 @@
 
     @media screen and (max-width: 470px) {
 
-        p{
+
+        article{
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        h1{
+            text-align: start;
+        }
+
+        p{ 
+            text-align: start;
             width: auto;
         }
     }
