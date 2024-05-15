@@ -26,7 +26,7 @@
    :global(:root){
     --primary: #ef233c;
     --dark: #050505;
-    --gray: #8E9095;
+    --gray: rgb(83, 83, 83);
     --green:#00ce2d;
     --blue: #2187E7;
     --white: #fff;

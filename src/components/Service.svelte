@@ -17,26 +17,30 @@
 
 <style>
     .card{
-        background-color: var(--white);
         min-width:300px;
-        max-width: 400px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        max-width: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         padding: 3rem;
         border-radius: 20px;
-        gap: 0.250rem;
+        gap: 1rem;
         flex-shrink: 1;
     }
 
     h3{
+
+        font-size: var(--fs-m);
         text-align: center;
+        color: var(--dark);
+
     }
 
     p{
         text-align: center;
+        color: var(--gray);
+
     }
 
 

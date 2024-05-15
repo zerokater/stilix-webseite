@@ -28,11 +28,11 @@
 <Section background="white">
 
 
-    <Service src="images/grafik-design.svg" title="Grafikdesign" copy="Wir bringen deine Marke zum Leben - von Konzept bis Umsetzung. Ideen werden durch Farben, Formen, Typografie und Bilder zu ansprechenden Designs." />
+    <Service src="images/grafik-design.svg" title="Grafikdesign" copy="Von Idee bis Design: Deine Marke lebt durch unsere Kreationen. Farben, Formen, Typografie und Bilder machen sie einzigartig." />
 
-    <Service src="images/web-design.svg" title="Webdesign" copy="Wir verwandeln deine Vision in eine Online-Präsenz, die nicht nur ästhetisch ansprechend ist, sondern mit deinem Look & Feel und einer intuitiven Nutzerführung punktet." />
+    <Service src="images/web-design.svg" title="Webdesign" copy="Deine Vision wird zu einer beeindruckenden Online-Präsenz: Ästhetik, Look & Feel und intuitive Nutzerführung vereint." />
 
-    <Service src="images/branding.svg" title="Branding" copy="Wir verleihen deiner Marke mit einem Brand Design ein einheitliches Erscheinungsbild und eine ganzheitliche visuelle Präsenz. Grafikdesign und Webdesign im Komplettpaket." />
+    <Service src="images/branding.svg" title="Branding" copy="Einheitliches Brand Design für deine Marke: Grafik- und Webdesign im Komplettpaket." />
 </Section>
 
 
@@ -87,7 +87,7 @@
     p {
         width: clamp(150px, 450px, 600px);
         font-size: var(--fs-400);
-        color: var(--dark);
+        color: var(--gray);
         text-align: center;
         font-weight: 500;
     }
