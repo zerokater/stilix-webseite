@@ -8,20 +8,27 @@
 <style>
     section{
         width: 100%;
+        background: var(--gradient);
     }
 
     article{
-        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0rem;
         width: 1400px;
-        background-color: brown;
         margin: 0 auto;
-        height: 40vh;
+        gap: 2rem;
     }
+
 
     @media screen and (max-width: 1460px) {
     article {
         padding: 2rem;
         width: 100%;
     }
+
+
     }
 </style>

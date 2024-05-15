@@ -1,5 +1,6 @@
 <script>
     import Nav from "/src/components/Nav.svelte";
+
 </script>
 
 
@@ -28,13 +29,14 @@
     --gray: #8E9095;
     --green:#00ce2d;
     --blue: #2187E7;
+    --white: #fff;
     --gradient: linear-gradient(120deg, #9d00ff, #0099f8);
     --gradient-green: linear-gradient(120deg, #08FFF0, #60FF4E);
 
 
     --fs-xl: clamp(1rem, 8vw, 5rem);
-    --fs-l: clamp(1rem, 8vw, 1.5rem);
-    --fs-500: 1.2rem;
+    --fs-l: clamp(1rem, 6vw, 3rem);
+    --fs-m: clamp(1rem, 4vw, 1.5rem);
     --fs-400: clamp(15px, 3vw, 16px);
    }
 

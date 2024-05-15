@@ -14,7 +14,7 @@
     a {
         padding: 16px 36px;
         font-weight: 500;
-        color: white;
+        color: var(--white);
         border-radius: 50px;
         font-size: var(--fs-400);
         transition: 200ms all ease-out;
@@ -27,7 +27,7 @@
 
     /* Secondary button styling */
     .secondary {
-        border: 2pt solid white;
+        border: 2pt solid var(--white);
     }
 
     /* Secondary-black button styling */

@@ -1,6 +1,8 @@
 <script>
     // Importing the Button component from its file
     import Button from "../components/Button.svelte";
+    import Services from "../components/Services.svelte";
+    import Section from "../components/Section.svelte";
 </script>
 
 <main>
@@ -21,6 +23,12 @@
         </div>
     </article>
 </main>
+
+
+
+<Services/>
+
+
 
 <!-- Styles -->
 <style>
