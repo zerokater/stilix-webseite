@@ -59,6 +59,7 @@
 
     @media screen and (max-width: 600px) {
     article {
+        gap: 1rem;
         flex-wrap: wrap;
     }
 

@@ -117,21 +117,9 @@
     }
 
     @media screen and (max-width: 470px) {
-        article {
-            align-items: flex-start;
-            gap: 2rem;
-        }
 
-        .copy {
-            align-items: flex-start;
-        }
-
-        h1 {
-            text-align: start;
-        }
 
         p {
-            text-align: start;
             width: auto;
         }
     }
