@@ -19,7 +19,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: black;
+    color: var(--dark);
    }
 
    :global(:root){
@@ -35,7 +35,7 @@
     --fs-xl: clamp(1rem, 8vw, 5rem);
     --fs-l: clamp(1rem, 8vw, 1.5rem);
     --fs-500: 1.2rem;
-    --fs-400: clamp(14px, 1vw, 15px);
+    --fs-400: clamp(15px, 3vw, 16px);
    }
 
 
