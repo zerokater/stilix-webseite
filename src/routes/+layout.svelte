@@ -34,9 +34,9 @@
     --gradient-green: linear-gradient(120deg, #08FFF0, #60FF4E);
 
 
-    --fs-xl: clamp(1rem, 8vw, 5rem);
-    --fs-l: clamp(1rem, 6vw, 3rem);
-    --fs-m: clamp(1rem, 4vw, 1.5rem);
+    --fs-xl: clamp(.875rem, 8vw, 5rem);
+    --fs-l: clamp(.875rem, 6vw, 3rem);
+    --fs-m: clamp(.875rem, 4vw, 1.5rem);
     --fs-400: clamp(15px, 3vw, 16px);
    }
 

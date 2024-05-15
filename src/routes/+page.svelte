@@ -2,6 +2,7 @@
     // Importing the Button component from its file
     import Button from "../components/Button.svelte";
     import Section from "../components/Section.svelte";
+    import Service from "../components/Service.svelte"
 </script>
 
 <main>
@@ -24,7 +25,15 @@
 </main>
 
 
-<Section/>
+<Section background="white">
+
+
+    <Service src="images/grafik-design.svg" title="Grafikdesign" copy="Wir bringen deine Marke zum Leben - von Konzept bis Umsetzung. Ideen werden durch Farben, Formen, Typografie und Bilder zu ansprechenden Designs." />
+
+    <Service src="images/web-design.svg" title="Webdesign" copy="Wir verwandeln deine Vision in eine Online-Präsenz, die nicht nur ästhetisch ansprechend ist, sondern mit deinem Look & Feel und einer intuitiven Nutzerführung punktet." />
+
+    <Service src="images/branding.svg" title="Branding" copy="Wir verleihen deiner Marke mit einem Brand Design ein einheitliches Erscheinungsbild und eine ganzheitliche visuelle Präsenz. Grafikdesign und Webdesign im Komplettpaket." />
+</Section>
 
 
 
@@ -39,7 +48,7 @@
     }
 
     article {
-        padding: 10rem 0rem 10rem 0rem;
+        padding: 10rem 0rem 5rem 0rem;
         width: 1400px;
         display: flex;
         flex-direction: column;

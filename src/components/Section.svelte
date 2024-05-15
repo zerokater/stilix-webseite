@@ -1,4 +1,8 @@
-<section>
+<script>
+    export let background
+</script>
+
+<section class="{background}">
     <article>
         <slot></slot>
     </article>
@@ -6,28 +10,56 @@
 
 
 <style>
+
+
     section{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .white{
+        background-color: var(--white);
+    }
+
+    .dark{
+        background-color: var(--dark);
+    }
+
+    .gradient{
         background: var(--gradient);
     }
 
     article{
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         padding: 5rem 0rem;
         width: 1400px;
-        margin: 0 auto;
         gap: 2rem;
-        height: 600px;
+        overflow: hidden;
     }
+
+
+
 
 
     @media screen and (max-width: 1460px) {
     article {
         padding: 2rem;
         width: 100%;
+    }
+
+
+    }
+
+
+
+    @media screen and (max-width: 600px) {
+    article {
+        flex-wrap: wrap;
     }
 
 
