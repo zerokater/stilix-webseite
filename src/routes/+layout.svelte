@@ -32,9 +32,14 @@
     --gradient-green: linear-gradient(120deg, #08FFF0, #60FF4E);
 
 
-    --h1: 48px;
-
+    --fs-xl: clamp(1rem, 8vw, 5rem);
+    --fs-l: clamp(1rem, 8vw, 1.5rem);
+    --fs-500: 1.2rem;
+    --fs-400: clamp(14px, 1vw, 15px);
    }
+
+
+
 
    :global(html){
         scroll-behavior: smooth;

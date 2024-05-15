@@ -28,7 +28,7 @@
 <header>
     <nav>
         <!-- Logo -->
-        <img id="logo" src="images/stilix-logo-negativ.svg" alt="" >
+        <img id="logo" src="images/stilix-logo-sw.svg" alt="" >
         {#if isSmallScreen}
             <!-- Hamburger-Menüsymbol -->
             <a id="hamburger" href="{void(0)}" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
@@ -65,8 +65,8 @@
 <style>
     /* Stilregeln für den Header */
     header {
-        background-color: var(--dark);
         width: 100%;
+        height: 10svh;
     }
 
     /* Stilregeln für das Logo */
@@ -101,12 +101,12 @@
 
 
     .nav-links a{
-        color: var(--gray);
+        color: var(--dark);
         transition: 200ms all ease-out;
     }
     /* Stilregeln für die normalen Menülinks bei Hover */
     .nav-links a:hover {
-        color: white;
+        color: var(--dark);
     }
 
     /* Stilregeln für das aufgeklappte Hamburger-Menü */
