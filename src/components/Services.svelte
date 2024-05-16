@@ -40,6 +40,10 @@
         align-items: stretch;
     }
 
+    .services:last-child{
+        border-bottom: 2pt solid var(--white);
+    }
+
     h3{
         flex: 1;
         font-size: var(--fs-l);
