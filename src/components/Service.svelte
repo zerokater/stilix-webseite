@@ -41,6 +41,7 @@
     }
 
     h4{
+        letter-spacing: 1px;
         color: var(--white);
         font-size: var(--fs-m);
     }
