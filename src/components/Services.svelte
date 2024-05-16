@@ -6,9 +6,9 @@
     <article>
         <h3>Unsere Services</h3>
         <div class="services">
-            <Service title="Grafikdesign"/>
-            <Service title="Webdesign"/>
-            <Service title="Branding"/>
+            <Service title="Grafikdesign" copy="Von Idee bis Design: Deine Marke lebt durch unsere Kreationen. Farben, Formen, Typografie und Bilder machen sie einzigartig."/>
+            <Service title="Webdesign" copy="Deine Vision wird zu einer beeindruckenden Online-Präsenz: Ästhetik, Look & Feel und intuitive Nutzerführung vereint."/>
+            <Service title="Branding" copy="Einheitliches Brand Design für deine Marke: Grafik- und Webdesign im Komplettpaket."/>
         </div>
     </article>
 </section>
@@ -22,7 +22,7 @@
     }
 
     article{
-        padding: 2rem 0rem;
+        padding: 5rem 0rem;
         width: 1400px;
         display: flex;  
         justify-content: center;
@@ -32,7 +32,8 @@
     }
 
     .services{
-        flex: 1;
+        flex: 2;
+        align-self: stretch;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -45,6 +46,8 @@
         color: white;
     }
 
+
+
     @media screen and (max-width: 1460px) {
         article {
             padding: 2rem;
@@ -55,7 +58,8 @@
     @media screen and (max-width: 768px) {
         article {
             flex-direction: column;
-            align-items: stretch;
+            align-items: center;
+            justify-content: center;
         }
     }
 </style>

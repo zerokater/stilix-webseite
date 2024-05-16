@@ -45,8 +45,17 @@
         font-size: var(--fs-m);
     }
 
+    p{
+        width: 90%;
+        color: var(--white);
+    }
+
     /* Transition effect for smooth rotation */
     .svg-icon {
         transition: transform 0.3s ease;
+    }
+
+    img{
+        cursor: pointer;
     }
 </style>
