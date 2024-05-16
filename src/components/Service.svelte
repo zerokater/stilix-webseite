@@ -1,56 +1,52 @@
 <script>
-    export let src
     export let title
     export let copy
+
+    import { slide } from "svelte/transition";
+
+    let isOpen = false;
+    let rotation = 0;
+
+    function toggle(){
+        isOpen = !isOpen;
+        rotation = isOpen ? 45 : 0;
+    }
 </script>
 
-
-
-
-
-
-<div class="card">
-    <img src="{src}" alt="">
-    <h3>{title}</h3>
-    <p>{copy}</p>
+<div class="service">
+    <div class="title">
+        <h4>{title}</h4>
+        <img class="svg-icon" on:click={toggle} src="images/close-plus.svg" alt="" style="transform: rotate({rotation}deg);">
+    </div>
+    {#if isOpen}
+        <div class="copy" transition:slide>
+            <p>{copy}</p>
+        </div>
+    {/if}
 </div>
 
+
 <style>
-    .card{
-        min-width:300px;
-        max-width: 500px;
+
+    .title{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service{
+        padding: 1rem 0rem;
+        border-top: 2pt solid var(--white);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3rem;
-        border-radius: 20px;
-        gap: 1rem;
-        flex-shrink: 1;
     }
 
-    h3{
-
+    h4{
+        color: var(--white);
         font-size: var(--fs-m);
-        text-align: center;
-        color: var(--dark);
-
     }
 
-    p{
-        text-align: center;
-        color: var(--gray);
-
+    /* Transition effect for smooth rotation */
+    .svg-icon {
+        transition: transform 0.3s ease;
     }
-
-
-    @media screen and (max-width: 600px) {
-    .card {
-        padding: 2rem;
-        max-width: 100%;
-    }
-
-
-    }
-
 </style>

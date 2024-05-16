@@ -1,8 +1,7 @@
 <script>
     // Importing the Button component from its file
     import Button from "../components/Button.svelte";
-    import Section from "../components/Section.svelte";
-    import Service from "../components/Service.svelte"
+    import Services from "../components/Services.svelte";
 </script>
 
 <main>
@@ -17,7 +16,7 @@
         <!-- Call to action buttons -->
         <div class="cta">
             <!-- Primary call to action button -->
-            <Button href="/kontakt" text="Los geht's" type="primary"/>
+                <Button href="/kontakt" text="Los geht's" type="primary"/>
             <!-- Secondary call to action button -->
             <Button href="/services" text="Mehr erfahren" type="secondary-black"/>
         </div>
@@ -25,17 +24,8 @@
 </main>
 
 
-<Section background="white">
 
-
-    <Service src="images/grafik-design.svg" title="Grafikdesign" copy="Von Idee bis Design: Deine Marke lebt durch unsere Kreationen. Farben, Formen, Typografie und Bilder machen sie einzigartig." />
-
-    <Service src="images/web-design.svg" title="Webdesign" copy="Deine Vision wird zu einer beeindruckenden Online-Präsenz: Ästhetik, Look & Feel und intuitive Nutzerführung vereint." />
-
-    <Service src="images/branding.svg" title="Branding" copy="Einheitliches Brand Design für deine Marke: Grafik- und Webdesign im Komplettpaket." />
-</Section>
-
-
+<Services/>
 
 
 <!-- Styles -->
