@@ -28,7 +28,7 @@
 <header>
     <nav>
         <!-- Logo -->
-        <img id="logo" src="images/stilix-logo-sw.svg" alt="" >
+        <img id="logo" src="images/stilix-logo-schwarz.svg" alt="" >
         {#if isSmallScreen}
             <!-- Hamburger-Menüsymbol -->
             <a id="hamburger" href="{void(0)}" on:click={toggleMenu}><img src="images/hamburger.svg" alt=""></a>
@@ -111,7 +111,7 @@
 
     /* Stilregeln für das aufgeklappte Hamburger-Menü */
     .nav-links-hamburger {
-        padding: 0rem 2rem;
+
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -136,7 +136,7 @@
 
     /* Stilregeln für die Menülinks im aufgeklappten Zustand bei Hover */
     .menu-open-links a:hover {
-        background: var(--gradient);
+        background: var(--gradient-green);
         padding: 0rem 10px;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -146,7 +146,8 @@
     .menu-open-nav {
         height: 10vh;
         padding: 2rem 0rem;
-        width: 100%;
+        width: 95%;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -156,6 +157,8 @@
     .menu-open-links {
         height: 90vh;
         height: 100%;
+        width: 90%;
+        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -165,16 +168,14 @@
     /* Medienabfragen für responsives Design */
     @media screen and (max-width: 1460px) {
         nav {
-            padding: 2rem;
-            width: 100%;
+            width: 95%;
         }
     }
 
     /* Medienabfragen für kleine Bildschirme */
     @media screen and (max-width: 768px) {
         nav {
-            padding: 2rem;
-            width: 100%;
+            width: 95%;
         }
     }
 </style>

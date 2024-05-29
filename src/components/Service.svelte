@@ -1,62 +1,58 @@
 <script>
+    export let background
     export let title
-    export let copy
-
-    import { slide } from "svelte/transition";
-
-    let isOpen = false;
-    let rotation = 0;
-
-    function toggle(){
-        isOpen = !isOpen;
-        rotation = isOpen ? 45 : 0;
-    }
 </script>
 
-<div class="service">
+
+<div class="service" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)), url({background});">
     <div class="title">
         <h4>{title}</h4>
-        <img class="svg-icon" on:click={toggle} src="images/close-plus.svg" alt="" style="transform: rotate({rotation}deg);">
     </div>
-    {#if isOpen}
-        <div class="copy" transition:slide>
-            <p>{copy}</p>
-        </div>
-    {/if}
+    <div class="category">
+        <p>Grafikdesign</p>
+    </div>
 </div>
 
 
 <style>
-
-    .title{
-        display: flex;
-        justify-content: space-between;
-    }
-
     .service{
-        padding: 1rem 0rem;
-        border-top: 2pt solid var(--white);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 450px;
+        transition: all 200ms ease-in-out;
+        border-radius: 16px;
+        cursor: pointer;
+
         display: flex;
         flex-direction: column;
+        padding: 0rem 2rem 2rem 2rem;
+        
+        justify-content: flex-end;
+        align-items: flex-start;
     }
 
+
     h4{
-        letter-spacing: 1px;
+        font-size: 32px;
         color: var(--white);
-        font-size: var(--fs-m);
     }
 
     p{
-        width: 90%;
-        color: var(--white);
+        background: var(--gradient-green);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    /* Transition effect for smooth rotation */
-    .svg-icon {
-        transition: transform 0.3s ease;
+    .service:hover{
+        transform: scale(0.975);
+
     }
 
-    img{
-        cursor: pointer;
+
+    @media screen and (max-width: 770px) {
+        .service{
+            height: 350px;
+        }
     }
 </style>
