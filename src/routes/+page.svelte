@@ -5,10 +5,9 @@
 
 <main>
     <article>
-        <Service background="images/livoreka_mockup.jpg" title="Livoreka Bau"/>
-        <Service background="images/livoreka_mockup.jpg" title="2"/>
-        <Service background="images/livoreka_mockup.jpg" title="3"/>
-        <Service background="images/livoreka_mockup.jpg" title="4"/>
+        <Service background="services/livoreka_mockup.jpg" title="Livoreka Bau" service="Grafikdesign"/>
+        <Service background="services/taffaw.jpg" title="Taffa Costruzioni" service="Grafikdesign, Branding"/>
+        <Service background="services/restaurant-tsv.png" title="Restaurant TSV" service="Webdesign, Branding"/>
     </article>
 
 </main>
@@ -18,6 +17,8 @@
 
 <!-- Styles -->
 <style>
+
+
     main {
         width: 100%;
         display: flex;
@@ -28,7 +29,7 @@
         width: 1400px;
         display: grid;
         grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Drei Spalten, die sich flexibel anpassen */
-        gap: 10px; /* Abstand zwischen den Elementen */
+        gap: 24px; /* Abstand zwischen den Elementen */
     }
 
     /* Media queries for responsiveness */

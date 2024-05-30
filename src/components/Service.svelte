@@ -1,6 +1,7 @@
 <script>
     export let background
     export let title
+    export let service
 </script>
 
 
@@ -9,12 +10,17 @@
         <h4>{title}</h4>
     </div>
     <div class="category">
-        <p>Grafikdesign</p>
+        <p>{service}</p>
     </div>
 </div>
 
 
 <style>
+
+
+
+
+
     .service{
         background-position: center;
         background-size: cover;
@@ -30,6 +36,8 @@
         
         justify-content: flex-end;
         align-items: flex-start;
+
+        border: 1pt solid gainsboro;
     }
 
 
