@@ -5,9 +5,9 @@
 
 <main>
     <article>
-        <Service background="services/livoreka_mockup.jpg" title="Livoreka Bau" service="Grafikdesign"/>
-        <Service background="services/taffaw.jpg" title="Taffa Costruzioni" service="Grafikdesign, Branding"/>
-        <Service background="services/restaurant-tsv.png" title="Restaurant TSV" service="Webdesign, Branding"/>
+        <Service background="/services/livoreka_mockup.jpg" title="Livoreka Bau" service="Grafikdesign"/>
+        <Service background="/services/taffa.jpg" title="Taffa Costruzioni" service="Grafikdesign, Branding"/>
+        <Service background="/services/restaurant-tsv.png" title="Restaurant TSV" service="Webdesign, Branding"/>
     </article>
 
 </main>
